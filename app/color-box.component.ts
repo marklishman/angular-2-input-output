@@ -4,9 +4,9 @@ import { RedGreenBlue } from "./red-green-blue";
 
 @Component({
     selector: 'color-box',
-    template: `<pre [style.background-color]="rgb.style">{{rgb | json}}</pre>`,
+    template: `<pre [style.background-color]="redGreenBlue.style">{{redGreenBlue | json}}</pre>`,
     styles: ['pre {height: 90px; width: 140px; padding: 10px;}']
 })
 export class ColorBoxComponent {
-    @Input() rgb: RedGreenBlue;
+    @Input("rgb") redGreenBlue: RedGreenBlue;
 }
